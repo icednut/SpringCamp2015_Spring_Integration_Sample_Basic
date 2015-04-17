@@ -9,19 +9,4 @@
                            http://www.springframework.org/schema/integration/spring-integration.xsd
                            http://www.springframework.org/schema/integration/ip
                            http://www.springframework.org/schema/integration/ip/spring-integration-ip.xsd">
-
-    <int:channel id="messageChannel"/>
-
-    <int:gateway id="sendGateway"
-                 service-interface="chapter03.tcp.send.TcpSendGateway"
-                 default-request-channel="messageChannel"/>
-
-    <int-tcp:tcp-outbound-gateway id="tcpSendGateway"
-                                  request-channel="messageChannel"
-                                  connection-factory="client"/>
-
-    <int-tcp:tcp-connection-factory id="client"
-                                    type="client"
-                                    host="localhost"
-                                    port="4001"/>
 </beans>

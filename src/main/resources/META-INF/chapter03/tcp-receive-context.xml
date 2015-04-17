@@ -7,20 +7,4 @@
                            http://www.springframework.org/schema/beans/spring-beans.xsd
                            http://www.springframework.org/schema/integration
                            http://www.springframework.org/schema/integration/spring-integration.xsd http://www.springframework.org/schema/integration/ip http://www.springframework.org/schema/integration/ip/spring-integration-ip.xsd">
-
-    <int:channel id="messageChannel"/>
-
-    <int-tcp:tcp-inbound-channel-adapter channel="messageChannel"
-                                         connection-factory="server"/>
-
-    <int-tcp:tcp-connection-factory id="server"
-                                    type="server"
-                                    port="4001"
-                                    using-nio="true"/>
-
-    <int:service-activator input-channel="messageChannel"
-                           ref="tcpReceiveService"
-                           method="receive"/>
-
-    <bean id="tcpReceiveService" class="chapter03.tcp.receive.TcpReceiveService"/>
 </beans>
