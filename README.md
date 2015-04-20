@@ -13,7 +13,4 @@
 
 ##Chapter03. TCP inbound & outbound 예제 작성
 - Spring Integration을 이용한 TCP 메시지 보내기 & 받기 예제 작성
-- TCP 메시지 보내기
- 1) 터미널 Open
- 2) telnet localhost 4001
- 3) 문자열 입력
+- TCP 메시지 보내기: 터미널 Open > 명령어 telnet localhost 4001 입력 > 문자열 입력
